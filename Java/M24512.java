@@ -18,12 +18,12 @@ public class M24512
 		// Get I2C device, M24512 I2C address is 0x50(80)
 		I2CDevice device = bus.getDevice(0x50);
 
-		// Select write register 0x0000
+		// Select write register 0x0001
 		byte[] data = new byte[3];
 		// Address msb
 		data[0] = 0x00;
 		// Address lsb
-		data[1] = 0x00;
+		data[1] = 0x01;
 		// data = 0x30(48)
 		data[2] = 0x30;
 		device.write(data, 0, 3);
