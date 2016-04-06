@@ -1,14 +1,13 @@
-import com.pi4j.io.i2c.I2CBus;
 // Distributed with a free-will license.
 // Use it any way you want, profit or free, provided it fits in the licenses of its associated works.
 // M24512
 // This code is designed to work with the M24512_I2CMEM I2C Mini Module available from ControlEverything.com.
 // https://www.controleverything.com/content/I2C-Memory?sku=M24512_I2CMEM#tabs-0-product_tabset-2
 
+import com.pi4j.io.i2c.I2CBus;
 import com.pi4j.io.i2c.I2CDevice;
 import com.pi4j.io.i2c.I2CFactory;
 import java.io.IOException;
-import java.util.Scanner;
 
 public class M24512
 {
