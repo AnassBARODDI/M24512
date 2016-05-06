@@ -15,11 +15,12 @@ void setup()
   Wire.begin();
   // Initialise Serial Communication, set baud rate = 9600
   Serial.begin(9600);
-
+    
   // Start I2C transmission
   Wire.beginTransmission(Addr); 
-  // Select write address
-  Wire.write(0x0001);
+  // Select write address register
+  Wire.write(0x00);
+  Wire.write(0x01);
   // Write the data
   Wire.write(0x30);
   // End I2C transmission
@@ -29,23 +30,23 @@ void setup()
 
 void loop() 
 {
-  int data = 0;
   // Start I2C transmission
   Wire.beginTransmission(Addr); 
   // Select data register
-  Wire.write(0x0001);
+  Wire.write(0x00);
+  Wire.write(0x01);
   // End I2C transmission
   Wire.endTransmission();
-  
+    
   // Request 1 byte of data
   Wire.requestFrom(Addr, 1);
-
-  // Read 1 byte of data
+    
+  // Read 1 byte of data 
   if(Wire.available() == 1)
   {
     data = Wire.read();
   }
-
+    
   // Output data to serial monitor
   Serial.print("Input data : ");
   Serial.println(data);
