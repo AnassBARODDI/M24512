@@ -8,7 +8,7 @@ This Device is available from ControlEverything.com [SKU: M24512_I2CMEM]
 
 https://www.controleverything.com/content/I2C-Memory?sku=M24512_I2CMEM
 
-This Sample code can be used with Raspberry pi, Arduino and Particle.
+This Sample code can be used with Raspberry pi, Arduino, Particle and Beaglebone Black.
 
 ## Java
 Download and install pi4j library on Raspberry pi. Steps to install pi4j are provided at:
@@ -61,5 +61,19 @@ https://build.particle.io/build/
 Verify and flash the code on your Photon. Code output is shown in logs at dashboard:
 
 https://dashboard.particle.io/user/logs
+
+
+## C
+
+Download (or git pull) the code in Beaglebone Black.
+
+Compile the c program.
+```cpp
+$>gcc M24512.c -o M24512
+```
+Run the c program.
+```cpp
+$>./M24512
+```
 
 #####The code output is the value of stored data.
